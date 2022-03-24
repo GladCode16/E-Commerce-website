@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Hubballi&display=swap');
+:root{
+    --text-color: black;
+    --hover-color: rgb(68, 68, 68);
+    --primary-font:'Hubballi', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    transition: all .5s;
+}
+#mostMainBody{
+    width: 100vw;
+    height: 100%;
+}
+#mainBody{
+    margin: auto;
+    width: 1020px;
+    position: relative;
+}
+#Navbar{
+    display: flex;
+    width: 1020px;
+    height: 60px;
+    align-items: center;
+}
+#Navbar ul{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+#Navbar ul li {
+    list-style: none;
+}
+#ham-img{
+    width: 30px;
+    display: none;
+}
+#logo{
+    margin: 0 0 0 5px;
+}
+#Navbar ul li a{
+    margin: 0 20px;
+    text-decoration: none;
+    color:var(--text-color);
+    font-family: var(--primary-font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#Navbar ul li a:hover{
+    color: var(--hover-color);
+}
+#mini_navbar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translateY(-130%);
+    width: 100%;
+    height: 300px;
+    background-color: rgb(245, 245, 245);
+    margin: auto;
+    border-radius:0 0px 30px 30px;
+    transition: all .4s;
+    justify-content: left;
+    
+}
+#mini_navbar ul li{
+    list-style: none;
+    margin: 30px 0;
+}
+#mini_navbar ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 20px;
+    padding: 30px;
+    font-size: 1.5em;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+.slides-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider{
+  width: 1020px;
+  height: 550px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.slides{
+  width: 500%;
+  height: 550px;
+  display: flex;
+  
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+  
+}
+
+.slide img{
+  width: 1020px;
+  height: 550px;
+}
+
+.first{
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+    background: url('./image/nauto banner.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.second{
+    background: url('./image/fate long banner.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center
+}
+.third{
+    background: url('./image/Goku banner.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center
+}
+@keyframes slide {
+    0%{
+        margin-left: 0;
+    }
+    16%{
+        margin-left: 0;
+    }
+    32%{
+        margin-left: -20%;
+    }
+    48%{
+        margin-left: -20%;
+    }
+    64%{
+        margin-left: -40%;
+    }
+    80%{
+        margin-left: -40%;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+.foreground{
+    display: none;
+    position: absolute;
+    height: 500px ;
+    width: 1020px;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent);
+}
+.slider:hover{
+    cursor: pointer;
+
+}
+
+#imgInCol{
+    left: 0;
+    margin-right: 40px;
+}
+#imgInCol2{
+    margin-left: 40px;
+}
+#shopping{
+    width: 1020px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+#shopping h2{
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    font-family: var(--primary-font);
+    position: relative;
+}
+#shopping h2::after{
+    content: "";
+    background: black;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: 35px;
+    left: 48%;
+}
+/* middle img */
+#img3 span{
+    position: absolute;
+    padding: 20px 0 0 20px;
+    left: 0;
+    color: black;
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#img3{
+    /* width: 300px; */
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+#img3 img{
+    width: 100%;
+}
+
+/* First Image and second image  */
+#img1{
+    display: flex;
+    flex-direction: column;
+    /* margin-right: 40px; */
+    position: relative;
+}
+#img1 img{
+    margin-top: 10px;
+    width: 230px;
+    height: 220px;
+}
+#img1 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#img1 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#img1 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+#img2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#img2 img{
+    margin-top: 10px;
+    width: 230px;
+    height: 220px;
+}
+#img2 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#img2 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#img2 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+#img4{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#img4 img{
+    margin-top: 10px;
+    width: 230px;
+    height: 220px;
+}
+#img4 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#img4 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#img4 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+
+#img5{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#img5 img{
+    margin-top: 10px;
+    width: 230px;
+    height: 220px;
+}
+#img5 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#img5 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#img5 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+
+
+
+#first_Row{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+hr{
+    margin: 50px 0;
+}
+#second_Row{
+    width: 100%;
+}
+#img_1{
+    display: flex;
+    position: relative;
+}
+#img_1 div{
+    position: relative;
+    top: 200px;
+    margin-left: 20px;
+    width: 43%;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+.title{
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+.title::after{
+    content: "";
+    background: black;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: 35px;
+    left: 48%;
+}
+.rate{
+    position: absolute;
+    top: 300px;
+    left: 320px;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+
+#img_2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 320px;
+    top: -30px;
+    margin-right: 20px;
+}
+#img_2 img{
+    width: 200px;
+}
+#img_2 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#img_2 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#img_2 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+#miniImgs{
+    display: flex;
+}
+#second_Row #img_1 img{
+    width: 300px;
+}
+
+
+
+#third_Row{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#third_Row #video{
+    position: absolute;
+    right: 0;
+    width: 600px;
+}
+#third_Row #video video{
+    width: 600px;
+    z-index: -1;
+
+}
+
+#video span{
+    position: absolute;
+    left: 44%;
+    top: 40%;
+    
+}
+#video span img{
+    position: absolute;
+    filter: invert(1);
+    width: 70px;
+    cursor: pointer;
+}
+#pause{
+    display: none;
+}
+.video_title {
+    position: absolute;
+    left: -180px;
+    top: 50px;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    background: white;
+    padding: 5px;
+}
+.video_title::after{
+    content: "";
+    background: black;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: 35px;
+    left: 48%;
+}
+.des{
+    position: absolute;
+    top: 140px;
+    right: 567px;
+    margin-right: 30px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+.rate2{
+    position: relative;
+    top: 250px;
+    left: 265px;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+
+#miniImgs2{
+    display: flex;
+}
+#miniImgs2 #img-1 img{
+    width: 190px;
+}
+#img-1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0px;
+    bottom: -350px;
+    margin-right: 20px;
+}
+#img-1 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#img-1 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#img-1 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+
+#forth_Row{
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 0;
+}
+#forth_Row #mainImg2{
+    width: 80%;
+}
+#forth_Row #mainImg2 img{
+    right: 0;
+    position: absolute;
+    width: 300px;
+}
+
+.title2{
+    position: absolute;
+    left: 600px;
+    top: 50px;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+.title2::after{
+    content: "";
+    background: black;
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    bottom: 35px;
+    left: 48%;
+}
+.des2{
+    position: absolute;
+    top: 20%;
+    right: 27%;
+    margin-right: 30px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+.rate3{
+    position: relative;
+    top: 250px;
+    left: 555px;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    font-weight: bold;
+}
+#miniImgs3{
+    display: flex;
+    position: absolute;
+    top: 470px;
+}
+#miniImgs3 div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+#miniImgs3 img{
+    width: 190px;
+}
+#miniImgs3 span:first-of-type{
+    font-family: var(--primary-font);
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.5);
+}
+#miniImgs3 span:nth-of-type(2){
+    font-family: var(--primary-font);
+    padding: 10px;
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+#miniImgs3 span:nth-of-type(3){
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+}
+
+#otherImgs{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+#otherImgs div{
+    position: relative;
+    margin: 30px 0;
+}
+#otherImgs div img{
+    width: 190px;
+}
+#otherImgs div span{
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    font-family: var(--primary-font);
+    color: rgba(0, 0, 0);
+    font-size: 1.3rem;
+    font-weight: bolder;
+
+}
+.last-btn{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+@media only screen and (max-width: 800px){
+    #Navbar ul li {
+        display: none;
+    }
+    #Navbar ul img{
+        display: block;
+        margin: 0 15px 0 0;
+    }
+
+}
